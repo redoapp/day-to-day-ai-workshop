@@ -77,8 +77,11 @@ You already know your way around a repo — so use the parts of the model that p
 ├── wiki/              # Layer 2: the AI-compiled wiki (index, concepts, entities, sources…)
 │   └── _operator.md   #   light context about you (hand-authored)
 ├── templates/         # note templates (concept / source / entity)
-├── .claude/commands/  # /wiki-ingest, /wiki-query, /wiki-lint
-├── skills/            # packaged, repeatable workflows
+├── .claude/commands/  # /wiki-start, /wiki-ingest, /wiki-query, /wiki-lint
+├── .claude/skills/    # bundled skills for Claude Code: find-skills, grill-me
+├── .agents/skills/    # same skills for Codex (universal location)
+├── skills-lock.json   # pins the bundled skills (restore with `npx skills experimental_install`)
+├── skills/            # an example skill you can copy (draft-update)
 ├── site/              # a simple page to deploy (Cloudflare Pages)
 └── DEPLOY.md          # how to put the page on the internet
 ```
