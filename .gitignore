@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Obsidian (if you open /wiki as a vault)
+.obsidian/
+
+# Node (only if you add tooling later)
+node_modules/
+dist/
+.env
+.env.local
