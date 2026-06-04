@@ -4,7 +4,8 @@ An opinionated starter for turning AI from a chat box into a **coworker** you de
 
 This repo is the "end state" from the workshop, ready to fork. It gives you four things:
 
-1. **A wiki** (`/wiki`) — light context about you, plus **LLM-maintained topic knowledge bases**: drop in sources, the AI distills and grows the notes.
+1. **An LLM knowledge base** (`raw/` + `wiki/` + `CLAUDE.md`) — drop sources in `raw/`; the AI
+   compiles and maintains a synthesised wiki. This is the centerpiece — see [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md).
 2. **Persistent instructions** (`AGENTS.md`) — how AI should always work with you.
 3. **A skill** (`/skills/draft-update`) — a repeatable workflow, not a one-off prompt.
 4. **A shippable page** (`/site`) — a real artifact you deploy to the internet.
@@ -23,15 +24,15 @@ This repo is the "end state" from the workshop, ready to fork. It gives you four
    git clone https://github.com/<you>/<your-repo>.git
    cd <your-repo>
    ```
-4. Start with [`wiki/00-start-here.md`](wiki/00-start-here.md).
+4. Read [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md), then run `claude` in the folder (it auto-loads `CLAUDE.md`).
 
 ---
 
 ## The three activities (map to folders)
 
-| Activity | Folder | Prompt to paste into your AI |
+| Activity | Where | What to do |
 |---|---|---|
-| **1. Build a topic knowledge base** | `/wiki` | *"Fill in `wiki/_operator.md` by interviewing me. Then duplicate `wiki/topics/example-ai-knowledge-bases` for a topic I actually research, tell me what sources to drop in `sources/`, and distill `README.md` from them — synthesize and cite, don't summarize each one."* |
+| **1. Build your knowledge base** | `raw/` + `wiki/` | Edit `CLAUDE.md`'s Overview to your topic and fill in `wiki/_operator.md`. Drop 3–5 sources into `raw/articles/`, then run `/wiki-ingest`. Then `/wiki-query <a real question>` and watch the answer get filed into `wiki/outputs/`. |
 | **2. Front-load a real task** | `/skills` | *"Grill me about a real task until you can write a clear spec with checklist milestones, then save it as a skill under `/skills`. Don't start the work until the spec is tight."* |
 | **3. Ship something small** | `/site` | *"Make a simple page in `/site` — no database, no build step. Then deploy it to Cloudflare Pages and verify the live URL actually loaded."* |
 
@@ -48,13 +49,15 @@ You already know your way around a repo — so use the parts of the model that p
   for research or independent branches and have them return recommendations + tradeoffs + evidence.
 - **Make the AI research tools you don't know.** Not *"can you do this?"* but *"research the
   current best way to do this — docs, examples, tradeoffs — and recommend an approach."*
-- **Treat the wiki as source of truth.** Point `AGENTS.md` at it and prune it as it drifts.
+- **Automate the knowledge base.** Once the manual loop feels natural, schedule `/wiki-ingest`
+  to run daily, or compile in the cloud with a GitHub Action — see [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md).
 
 ---
 
 ## Your next 7 days
 
-- [ ] Add one source to a topic in `/wiki` each day and have the AI re-distill it.
+- [ ] Drop one source into `raw/` each day and run `/wiki-ingest`.
+- [ ] Ask the wiki one real question with `/wiki-query` and let it file the answer.
 - [ ] Add one line to `AGENTS.md` (one persistent instruction).
 - [ ] Turn one repeated task into a skill or checklist in `/skills`.
 - [ ] Ship one tiny artifact from `/site`.
@@ -66,14 +69,17 @@ You already know your way around a repo — so use the parts of the model that p
 
 ```
 .
+├── CLAUDE.md          # the knowledge-base schema (auto-loaded by Claude Code)
+├── KNOWLEDGE-BASE.md  # how the system works (read this first)
 ├── AGENTS.md          # persistent instructions for your AI coworker
-├── wiki/
-│   ├── _operator.md   # light context about you
-│   └── topics/        # LLM-maintained knowledge bases (sources → distilled notes)
+├── raw/               # Layer 1: your sources (AI reads, never edits)
+├── wiki/              # Layer 2: the AI-compiled wiki (index, concepts, entities, sources…)
+│   └── _operator.md   #   light context about you (hand-authored)
+├── templates/         # note templates (concept / source / entity)
+├── .claude/commands/  # /wiki-ingest, /wiki-query, /wiki-lint
 ├── skills/            # packaged, repeatable workflows
 ├── site/              # a simple page to deploy (Cloudflare Pages)
-├── DEPLOY.md          # how to put the page on the internet
-└── .gitignore
+└── DEPLOY.md          # how to put the page on the internet
 ```
 
 The tools will change. The durable skill is building context, asking better questions,

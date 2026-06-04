@@ -1,7 +1,7 @@
 # Operator context
 
-> Light context about *you*, so any AI (or any topic KB) can match your role, level, and taste.
-> This is the one note you author by hand. Keep it short. Fill in with your AI, then prune.
+> Light context about *you*, so the AI maintaining this knowledge base matches your role,
+> level, and taste. This is the one wiki page you author by hand. Keep it short.
 
 ## Role
 *What's your job? Who do you work with? What are you responsible for?*
@@ -20,4 +20,5 @@
 
 ---
 
-*Topics you're actively researching live in [`topics/`](topics/). This note is just about you.*
+*The compiled knowledge base lives in [`index.md`](index.md). This page is just about you —
+the AI reads it but does not edit it.*

@@ -12,21 +12,20 @@ Keep it **short**. Link to deeper files instead of stuffing everything in here.
 - **Ask clarifying questions before large work.** Don't guess on anything expensive to undo.
 - Prefer **concise** answers. Lead with the conclusion.
 - **Verify your work** before calling it done — run it, check it, show me evidence.
-- Use my **wiki as the source of truth** ([`/wiki`](wiki/00-start-here.md)). If it's stale, tell me.
+- Use my **wiki as the source of truth** ([`wiki/index.md`](wiki/index.md)). If it's stale, tell me.
 - When something gets confusing, **slow down and teach me only the concept I need** —
   offer a diagram, tell me what changed, and what you'll try next.
 
 ## About me
 
-See [`wiki/_operator.md`](wiki/_operator.md) for my role, how I work, and what good work
-looks like. Topics I'm actively researching live in [`wiki/topics/`](wiki/topics/) — those
-knowledge bases are LLM-maintained, so prefer updating them over answering from memory.
+See [`wiki/_operator.md`](wiki/_operator.md) for my role, how I work, and what good work looks like.
 
-## Maintaining the wiki
+## The knowledge base
 
-When you answer from a topic in `wiki/topics/`, ground it in that topic's `sources/`. If a
-source is missing, say so and suggest what to add — don't guess. Promote durable answers from
-`questions.md` into the topic's `README.md`. I rarely hand-edit the wiki; that's your job.
+This repo is an LLM knowledge base. [`CLAUDE.md`](CLAUDE.md) is the schema — it defines the
+`raw/` → `wiki/` layers and the ingest/query/lint operations. **Read it before touching the
+wiki.** Ground every answer in `raw/`; if a source is missing, say so and suggest what to add
+rather than guessing. I rarely hand-edit the wiki; maintaining it is your job.
 
 ## When you don't know the tool
 
