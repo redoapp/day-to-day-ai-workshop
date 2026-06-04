@@ -24,8 +24,8 @@ This repo is the "end state" from the workshop, ready to fork. It gives you four
    git clone https://github.com/<you>/<your-repo>.git
    cd <your-repo>
    ```
-4. Run `claude` in the folder (it auto-loads `CLAUDE.md`), then type **`/wiki-start`** — it walks
-   you through setting up your wiki for your topic. Or read [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md) to do it by hand.
+4. Run `claude` in the folder (it auto-loads `CLAUDE.md`), then type **`/wiki-start`** — it sets up
+   your wiki through a few quick multiple-choice questions. Or read [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md) to do it by hand.
 
 ---
 

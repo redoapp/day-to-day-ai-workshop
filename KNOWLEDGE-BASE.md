@@ -29,10 +29,11 @@ next question benefits from all previous work.
 
 ## First time? Run `/wiki-start`
 
-Run `claude` in this directory and type **`/wiki-start`**. It interviews you, points the schema
+Run `claude` in this directory and type **`/wiki-start`**. It asks you a few quick
+multiple-choice questions — your topic, your role, how you like to work — then points the schema
 at your topic, fills in your operator note, clears the example seed, helps you add your first
-sources, and runs the first compile — the whole setup in one guided pass. The rest of this doc
-is what `/wiki-start` automates, for when you want to do it by hand.
+sources, and runs the first compile. The whole setup in one guided, click-through pass. The rest
+of this doc is what `/wiki-start` automates, for when you want to do it by hand.
 
 ## Daily use (Claude Code in this folder)
 
