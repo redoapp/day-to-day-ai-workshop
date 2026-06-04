@@ -17,7 +17,8 @@ source_count: 1
 Anthropic's CLI agent with full filesystem access. Run in the vault, it auto-loads the
 `CLAUDE.md` schema and can create and edit wiki pages directly — so the [[ingest-query-lint]]
 cycles run from a single prompt instead of a copy-paste loop. It's the engine behind this repo's
-`/wiki-*` commands. [[hoeem-2026-llm-knowledge-base-course]]
+`/wiki-*` commands. [[hoeem-2026-llm-knowledge-base-course]] It's also one of the agent harnesses
+evaluated by the [[deep-swe-benchmark]]. [[datacurve-2026-deep-swe-benchmark]]
 
 ## Sources
-- [[hoeem-2026-llm-knowledge-base-course]]
+- [[hoeem-2026-llm-knowledge-base-course]] · [[datacurve-2026-deep-swe-benchmark]]

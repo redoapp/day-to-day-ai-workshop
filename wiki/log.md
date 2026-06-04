@@ -24,3 +24,9 @@ Append-only record of every operation. Newest at the bottom.
 ## [2026-06-04] synthesis | What makes a knowledge base compound
 - Created: wiki/syntheses/what-makes-a-knowledge-base-compound.md
 - Updated: wiki/index.md
+
+## [2026-06-04] ingest | DataCurve AI — DeepSWE benchmark
+- Created: wiki/sources/datacurve-2026-deep-swe-benchmark.md
+- Created: wiki/entities/deep-swe-benchmark.md, datacurve-ai.md, swe-bench.md (new)
+- Updated: wiki/entities/claude-code.md (linked as an evaluated harness), wiki/index.md
+- Note: new topic area (coding-agent benchmarks); bridges to the KB cluster via [[claude-code]].

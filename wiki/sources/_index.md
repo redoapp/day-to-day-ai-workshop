@@ -9,3 +9,4 @@ One summary per raw source in [`raw/`](../../raw/). Named `{author}-{year}-{shor
 
 - [[karpathy-2026-llm-knowledge-bases]] — "LLM Knowledge Bases" (Karpathy).
 - [[hoeem-2026-llm-knowledge-base-course]] — "How to Create Your Own LLM Knowledge Bases (full course)" (hoeem).
+- [[datacurve-2026-deep-swe-benchmark]] — "DeepSWE benchmark" (DataCurve AI).

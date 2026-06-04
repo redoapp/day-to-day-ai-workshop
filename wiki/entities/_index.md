@@ -14,3 +14,6 @@ People, organisations, and tools. One file each.
 - [[dataview]] — Obsidian plugin that queries the vault's frontmatter.
 - [[obsidian-web-clipper]] — One-click web → markdown into `raw/`.
 - [[markitdown]] — Converts PDFs/docs to markdown for `raw/`.
+- [[deep-swe-benchmark]] — DataCurve's hard, long-horizon coding-agent benchmark.
+- [[datacurve-ai]] — Org behind the DeepSWE benchmark.
+- [[swe-bench]] — The saturating baseline DeepSWE reacts to.
