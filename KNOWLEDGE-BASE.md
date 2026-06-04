@@ -71,15 +71,28 @@ Then run `/wiki-start` to clear the example and point the base at *your* topic.
 ## Make Obsidian shine (recommended plugins)
 
 The repo ships a curated `.obsidian/` (dark theme + a colour-coded graph), but the richest
-features are community plugins — install via **Settings → Community plugins → Browse**:
+features are community plugins — install via **Settings → Community plugins → Browse**.
 
+### ⭐ Recommended: turn this on first — Obsidian Git
+This vault is already a GitHub repo, and the AI rewrites your files (regenerates the index,
+appends to pages, reshuffles links). **Obsidian Git** gives you a no-terminal commit + one-click
+undo over every change — your safety net when an edit goes wrong. After installing, set:
+- **Auto-commit-and-sync** every `10` minutes (also enable *commit-and-sync on save* if you like).
+- **Pull on startup** — so you always open the latest.
+
+Then any bad AI edit is one "restore previous version" away, and your work is continuously backed
+up to GitHub without touching a terminal.
+
+### Also worth it
 - **Dataview** — powers [`wiki/dashboard.md`](wiki/dashboard.md); turns frontmatter into live tables.
 - **Homepage** — set `wiki/dashboard.md` to open on launch.
-- **Obsidian Git** — auto-commit every change; your safety net when the AI edits files.
+- **Smart Connections** — surfaces semantically *related* notes (and chat-with-your-notes); runs a
+  local embedding model so nothing leaves your machine. Pays off as the vault grows. Add its index
+  folder (`.smart-env/`) to `.gitignore`.
 - **Templater** — apply the note templates in [`templates/`](templates/) automatically.
 - **Linter** — keep frontmatter and formatting consistent as the AI writes many files.
 
-(All optional — the wiki is plain markdown and works without any of them.)
+(Everything except Git is optional — the wiki is plain markdown and works without any of them.)
 
 ## Going further (optional, beyond this workshop)
 
