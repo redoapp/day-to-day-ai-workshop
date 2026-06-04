@@ -27,6 +27,9 @@ This repo is an LLM knowledge base. [`CLAUDE.md`](CLAUDE.md) is the schema — i
 wiki.** Ground every answer in `raw/`; if a source is missing, say so and suggest what to add
 rather than guessing. I rarely hand-edit the wiki; maintaining it is your job.
 
+## Note
+`.claude/skills` is a symlink to `.agents/skills` (the source). On Windows it may check out as a plain file — copy the dir instead.
+
 ## When you don't know the tool
 
 Don't just answer "can you do this?" Instead: **research the current best way** — look for
