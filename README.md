@@ -73,8 +73,10 @@ You already know your way around a repo — so use the parts of the model that p
 ├── CLAUDE.md          # the knowledge-base schema (auto-loaded by Claude Code)
 ├── KNOWLEDGE-BASE.md  # how the system works (read this first)
 ├── AGENTS.md          # persistent instructions for your AI coworker
+├── .obsidian/         # curated Obsidian config (dark theme + colour-coded graph)
 ├── raw/               # Layer 1: your sources (AI reads, never edits)
 ├── wiki/              # Layer 2: the AI-compiled wiki (index, concepts, entities, sources…)
+│   ├── dashboard.md   #   live Dataview dashboard (Obsidian Homepage)
 │   └── _operator.md   #   light context about you (hand-authored)
 ├── templates/         # note templates (concept / source / entity)
 ├── .claude/commands/  # /wiki-start, /wiki-ingest, /wiki-query, /wiki-lint

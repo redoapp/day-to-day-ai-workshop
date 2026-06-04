@@ -30,7 +30,7 @@ collection of scripts. See [[llm-knowledge-base]] for the distilled concept.
 - Plain markdown + Obsidian keeps it portable and inspectable.
 
 ## Concepts
-- [[llm-knowledge-base]]
+- [[llm-knowledge-base]] · [[filing-loop]] · [[ai-as-compiler]]
 
 ## Entities
-- [[andrej-karpathy]]
+- [[andrej-karpathy]] · [[obsidian]]

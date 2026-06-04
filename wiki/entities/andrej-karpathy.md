@@ -16,6 +16,8 @@ source_count: 1
 Researcher and educator. In the context of this wiki, the originator of the widely-shared
 **[[llm-knowledge-base]]** pattern — using LLMs to compile raw sources into a maintained
 markdown wiki, with the model (not the human) doing the upkeep. [[karpathy-2026-llm-knowledge-bases]]
+His framing — spending tokens "manipulating knowledge" rather than code — underpins
+[[ai-as-compiler]]. The pattern was later expanded into a full course by [[hoeem]].
 
 ## Sources
 - [[karpathy-2026-llm-knowledge-bases]]

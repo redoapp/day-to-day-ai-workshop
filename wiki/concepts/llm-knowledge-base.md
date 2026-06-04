@@ -8,7 +8,7 @@ type: concept
 status: final
 related:
   - "[[andrej-karpathy]]"
-source_count: 1
+source_count: 2
 confidence: emerging
 ---
 
@@ -35,5 +35,9 @@ and connecting ideas) rather than a retriever (returning similar chunks).
 Plain text is portable and inspectable: readable by any tool, on any OS, with no vendor
 lock-in. Tools like Obsidian render the `[[wikilinks]]` as a navigable graph.
 
+## Related
+- Built on the [[three-layer-architecture]] and the [[ingest-query-lint]] cycles.
+- Compounds through the [[filing-loop]]; the AI works as [[ai-as-compiler]], not a search engine.
+
 ## Sources
-- [[karpathy-2026-llm-knowledge-bases]]
+- [[karpathy-2026-llm-knowledge-bases]] · [[hoeem-2026-llm-knowledge-base-course]]

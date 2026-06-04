@@ -56,11 +56,30 @@ the project instructions, upload your `raw/` and `wiki/` files, and copy outputs
 
 ## See it work
 
-There's a seeded example: one raw source ([`raw/articles/karpathy-llm-knowledge-bases.md`](raw/articles/karpathy-llm-knowledge-bases.md))
-already compiled into a [source summary](wiki/sources/), a [concept page](wiki/concepts/), and an
-[entity page](wiki/entities/), all wired into [`wiki/index.md`](wiki/index.md). Open Obsidian's
-**Graph View** to see them connected. Then point `CLAUDE.md`'s Overview line at *your* topic,
-clear the example, drop in 3–5 sources, and run `/wiki-ingest`.
+There's a fully-worked example seeded in the repo (topic: *LLM knowledge bases*): **2 raw
+sources** compiled into **6 concepts, 7 entities, a synthesis, and a filed query answer**, all
+cross-linked and listed in [`wiki/index.md`](wiki/index.md). Open it in Obsidian and:
+
+- press `Cmd/Ctrl+G` for **Graph View** — you'll see a connected network, colour-coded by type
+  (concepts / entities / sources / syntheses / outputs), not a lonely star;
+- open [`wiki/dashboard.md`](wiki/dashboard.md) for **live Dataview tables** of the whole base;
+- read [`wiki/outputs/how-is-this-different-from-rag-or-normal-chat.md`](wiki/outputs/how-is-this-different-from-rag-or-normal-chat.md)
+  to see a **filed, cited answer** — the [filing loop](wiki/concepts/filing-loop.md) in action.
+
+Then run `/wiki-start` to clear the example and point the base at *your* topic.
+
+## Make Obsidian shine (recommended plugins)
+
+The repo ships a curated `.obsidian/` (dark theme + a colour-coded graph), but the richest
+features are community plugins — install via **Settings → Community plugins → Browse**:
+
+- **Dataview** — powers [`wiki/dashboard.md`](wiki/dashboard.md); turns frontmatter into live tables.
+- **Homepage** — set `wiki/dashboard.md` to open on launch.
+- **Obsidian Git** — auto-commit every change; your safety net when the AI edits files.
+- **Templater** — apply the note templates in [`templates/`](templates/) automatically.
+- **Linter** — keep frontmatter and formatting consistent as the AI writes many files.
+
+(All optional — the wiki is plain markdown and works without any of them.)
 
 ## Going further (optional, beyond this workshop)
 

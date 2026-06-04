@@ -6,8 +6,10 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Obsidian (if you open /wiki as a vault)
-.obsidian/
+# Obsidian — ship the curated config, ignore only the volatile per-user state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
 
 # Node (only if you add tooling later)
 node_modules/
