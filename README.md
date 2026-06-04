@@ -78,8 +78,8 @@ You already know your way around a repo — so use the parts of the model that p
 │   └── _operator.md   #   light context about you (hand-authored)
 ├── templates/         # note templates (concept / source / entity)
 ├── .claude/commands/  # /wiki-start, /wiki-ingest, /wiki-query, /wiki-lint
-├── .claude/skills/    # bundled skills for Claude Code: find-skills, grill-me
-├── .agents/skills/    # same skills for Codex (universal location)
+├── .agents/skills/    # bundled skills (source of truth): find-skills, grill-me
+├── .claude/skills  →  symlink to ../.agents/skills (so Claude Code sees the same set)
 ├── skills-lock.json   # pins the bundled skills (restore with `npx skills experimental_install`)
 ├── skills/            # an example skill you can copy (draft-update)
 ├── site/              # a simple page to deploy (Cloudflare Pages)
