@@ -24,7 +24,8 @@ This repo is the "end state" from the workshop, ready to fork. It gives you four
    git clone https://github.com/<you>/<your-repo>.git
    cd <your-repo>
    ```
-4. Read [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md), then run `claude` in the folder (it auto-loads `CLAUDE.md`).
+4. Run `claude` in the folder (it auto-loads `CLAUDE.md`), then type **`/wiki-start`** — it walks
+   you through setting up your wiki for your topic. Or read [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md) to do it by hand.
 
 ---
 
@@ -32,7 +33,7 @@ This repo is the "end state" from the workshop, ready to fork. It gives you four
 
 | Activity | Where | What to do |
 |---|---|---|
-| **1. Build your knowledge base** | `raw/` + `wiki/` | Edit `CLAUDE.md`'s Overview to your topic and fill in `wiki/_operator.md`. Drop 3–5 sources into `raw/articles/`, then run `/wiki-ingest`. Then `/wiki-query <a real question>` and watch the answer get filed into `wiki/outputs/`. |
+| **1. Build your knowledge base** | `raw/` + `wiki/` | Run **`/wiki-start`** — it interviews you, sets your topic, clears the example, and helps you add your first 3–5 sources. Then `/wiki-query <a real question>` and watch the answer get filed into `wiki/outputs/`. |
 | **2. Front-load a real task** | `/skills` | *"Grill me about a real task until you can write a clear spec with checklist milestones, then save it as a skill under `/skills`. Don't start the work until the spec is tight."* |
 | **3. Ship something small** | `/site` | *"Make a simple page in `/site` — no database, no build step. Then deploy it to Cloudflare Pages and verify the live URL actually loaded."* |
 
