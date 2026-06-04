@@ -8,7 +8,7 @@ This repo is the "end state" from the workshop, ready to fork. It gives you four
    compiles and maintains a synthesised wiki. This is the centerpiece — see [`KNOWLEDGE-BASE.md`](KNOWLEDGE-BASE.md).
 2. **Persistent instructions** (`AGENTS.md`) — how AI should always work with you.
 3. **A skill** (`/skills/draft-update`) — a repeatable workflow, not a one-off prompt.
-4. **A shippable page** (`/site`) — a real artifact you deploy to the internet.
+4. **Deliverables** (`sites/`, `decks/`) — real artifacts you build *from* the knowledge: websites you deploy, and presentations you can present.
 
 > The point isn't the files. It's the operating model: **give your AI coworker the
 > context, tools, constraints, and a clear finish line — then delegate and verify.**
@@ -35,7 +35,7 @@ This repo is the "end state" from the workshop, ready to fork. It gives you four
 |---|---|---|
 | **1. Build your knowledge base** | `raw/` + `wiki/` | Run **`/wiki-start`** — it interviews you, sets your topic, clears the example, and helps you add your first 3–5 sources. Then `/wiki-query <a real question>` and watch the answer get filed into `wiki/outputs/`. |
 | **2. Front-load a real task** | `/skills` | *"Grill me about a real task until you can write a clear spec with checklist milestones, then save it as a skill under `/skills`. Don't start the work until the spec is tight."* |
-| **3. Ship something small** | `/site` | *"Make a simple page in `/site` — no database, no build step. Then deploy it to Cloudflare Pages and verify the live URL actually loaded."* |
+| **3. Ship something small** | `sites/` | *"Make a simple page in `sites/<name>/` — no database, no build step. Then deploy it to Cloudflare Pages and verify the live URL actually loaded."* |
 
 After each activity, **debrief**: What did it miss? What did it get surprisingly right?
 What would you now delegate without watching?
@@ -61,7 +61,7 @@ You already know your way around a repo — so use the parts of the model that p
 - [ ] Ask the wiki one real question with `/wiki-query` and let it file the answer.
 - [ ] Add one line to `AGENTS.md` (one persistent instruction).
 - [ ] Turn one repeated task into a skill or checklist in `/skills`.
-- [ ] Ship one tiny artifact from `/site`.
+- [ ] Ship one tiny artifact from `sites/` (or draft a deck in `decks/`).
 - [ ] Ask your AI to summarize what it learned about how you work.
 
 ---
@@ -79,14 +79,20 @@ You already know your way around a repo — so use the parts of the model that p
 │   ├── dashboard.md   #   live Dataview dashboard (Obsidian Homepage)
 │   └── _operator.md   #   light context about you (hand-authored)
 ├── templates/         # note templates (concept / source / entity)
+├── decks/             # deliverable: presentations you build from the wiki
+├── sites/             # deliverable: websites you build & deploy (one folder per site)
 ├── .claude/commands/  # /wiki-start, /wiki-ingest, /wiki-query, /wiki-lint
 ├── .agents/skills/    # bundled skills (source of truth): find-skills, grill-me
 ├── .claude/skills  →  symlink to ../.agents/skills (so Claude Code sees the same set)
 ├── skills-lock.json   # pins the bundled skills (restore with `npx skills experimental_install`)
 ├── skills/            # an example skill you can copy (draft-update)
-├── site/              # a simple page to deploy (Cloudflare Pages)
-└── DEPLOY.md          # how to put the page on the internet
+└── DEPLOY.md          # how to deploy a site from sites/ to the internet
 ```
+
+**Knowledge vs. deliverables.** `raw/` and `wiki/` are *knowledge* the AI maintains (the
+ingest/query/lint cycles rewrite them). `decks/` and `sites/` are *deliverables you own* — the AI
+drafts and edits them only when you ask, drawing on the wiki, and never touches them via the
+cycles.
 
 The tools will change. The durable skill is building context, asking better questions,
 delegating clearly, and verifying outcomes. That's how AI becomes a coworker.

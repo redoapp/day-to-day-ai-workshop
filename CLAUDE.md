@@ -19,6 +19,12 @@ See [`wiki/_operator.md`](wiki/_operator.md) for who I am and how I work.
 - `wiki/syntheses/` — cross-cutting analysis articles.
 - `wiki/outputs/` — filed answers to my queries.
 
+## Deliverables (human-owned — edit only on request)
+- `decks/` — presentations; `sites/` — websites. These are **deliverables I own**, not part of
+  the wiki. Draft and edit them **only when I explicitly ask**, drawing on the wiki for content.
+  **Never** read, rewrite, or "tidy" them as part of the ingest/query/lint cycles — those cycles
+  operate on `raw/` and `wiki/` only.
+
 ## File conventions
 - Filenames: **kebab-case**, lowercase (`active-inference.md`).
 - Source summaries: `{author}-{year}-{short-title}.md`.
