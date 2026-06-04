@@ -82,7 +82,7 @@ You already know your way around a repo — so use the parts of the model that p
 ├── decks/             # deliverable: presentations you build from the wiki
 ├── sites/             # deliverable: websites you build & deploy (one folder per site)
 ├── .claude/commands/  # /wiki-start, /wiki-ingest, /wiki-query, /wiki-lint
-├── .agents/skills/    # bundled skills (source of truth): find-skills, grill-me
+├── .agents/skills/    # skills (source of truth): find-skills, grill-me (installed) + teach-me (ours)
 ├── .claude/skills  →  symlink to ../.agents/skills (so Claude Code sees the same set)
 ├── skills-lock.json   # pins the bundled skills (restore with `npx skills experimental_install`)
 ├── skills/            # an example skill you can copy (draft-update)
