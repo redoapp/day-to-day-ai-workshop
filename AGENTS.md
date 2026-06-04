@@ -18,8 +18,15 @@ Keep it **short**. Link to deeper files instead of stuffing everything in here.
 
 ## About me
 
-See [`wiki/about-me.md`](wiki/about-me.md) for my role, what I care about, and what good
-work looks like. See [`wiki/workflows.md`](wiki/workflows.md) for how I like tasks run.
+See [`wiki/_operator.md`](wiki/_operator.md) for my role, how I work, and what good work
+looks like. Topics I'm actively researching live in [`wiki/topics/`](wiki/topics/) — those
+knowledge bases are LLM-maintained, so prefer updating them over answering from memory.
+
+## Maintaining the wiki
+
+When you answer from a topic in `wiki/topics/`, ground it in that topic's `sources/`. If a
+source is missing, say so and suggest what to add — don't guess. Promote durable answers from
+`questions.md` into the topic's `README.md`. I rarely hand-edit the wiki; that's your job.
 
 ## When you don't know the tool
 

@@ -1,28 +1,57 @@
 # Start here — your LLM wiki
 
-This folder is your **second brain that AI can actually use**. Plain markdown files.
-AI is very good at reading, searching, editing, and summarizing files — so the more of
-your real context lives here, the more useful it gets.
+This wiki has two parts:
 
-## Why files (not chat history)
+1. **`_operator.md`** — light context about *you*: your role, how you work, what good looks like.
+   You write this once and tweak it occasionally.
+2. **`topics/`** — **LLM-maintained knowledge bases**, one folder per topic you care about.
+   You drop in raw sources; the LLM distills and grows the notes. You mostly *read*.
 
-- Chat threads get messy and the memory becomes invisible.
-- Files are **portable** — they're yours, you can move them anywhere.
-- You can **inspect, prune, and improve** the context yourself.
+## The model (why it's shaped this way)
 
-## The notes
+This follows Andrej Karpathy's "LLM knowledge bases" idea:
 
-- [`about-me.md`](about-me.md) — your role, what you care about, what good work looks like.
-- [`workflows.md`](workflows.md) — how you actually do recurring work.
-- [`taste.md`](taste.md) — your standards and preferences; what "good" means to you.
-- [`projects.md`](projects.md) — what you're working on right now.
-- [`references.md`](references.md) — links, tools, and resources worth keeping.
+> Raw data from many sources ("junk": web pages, PDFs, pastes) is **collected**, then
+> **compiled by an LLM into a `.md` wiki**, then **operated on by CLIs** so the LLM can do
+> Q&A and **incrementally enhance** it — all viewable in Obsidian. *You rarely ever write or
+> edit the wiki manually — it's the domain of the LLM.*
 
-## How to grow it
+So the wiki isn't a folder you maintain by hand. It's an **external brain the LLM maintains
+for you** from the raw material you feed it.
 
-Treat it like a garden. Add one note at a time. A good first move — paste this to your AI:
+## The loop (per topic)
 
-> "Ask me questions until you understand my role, then create/update the notes in this
-> `/wiki` folder so a new coworker (or AI) could get up to speed on me in five minutes."
+```
+   drop sources            ask the LLM to distill        ask questions
+   into sources/    ──►     into README.md         ──►    LLM answers + appends
+   (links, PDFs,           (synthesis, not a              to questions.md and
+    pastes)                 dump — cite the sources)      enhances README.md
+                                   ▲                              │
+                                   └──────────────────────────────┘
+                                        you mostly read & prune
+```
 
-Then read what it wrote and fix what it got wrong. **The editing is the point.**
+## Anatomy of a topic
+
+```
+topics/<your-topic>/
+├── sources/      # the inbox: raw "junk" you collect (one file per source)
+├── README.md     # the distilled knowledge base — the LLM writes this
+└── questions.md  # a running Q&A log the LLM appends to
+```
+
+See the worked example in [`topics/example-ai-knowledge-bases/`](topics/example-ai-knowledge-bases/).
+
+## Start your own topic
+
+Paste this to your AI:
+
+> "Duplicate `wiki/topics/example-ai-knowledge-bases/` as `topics/<my-topic>`, empty out the
+> example content, and tell me what sources to drop into `sources/`. Once I've added them,
+> distill `README.md` from those sources — synthesize, don't summarize each one, and cite
+> which source each claim came from."
+
+## View it nicely
+
+Open the repo (or just the `wiki/` folder) as an **Obsidian** vault to browse, search, and
+follow links between notes. The LLM does the writing; Obsidian is how you read.

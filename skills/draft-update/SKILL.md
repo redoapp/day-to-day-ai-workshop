@@ -11,8 +11,8 @@ Turn messy input (notes, links, half-sentences) into an update someone busy can 
 
 1. **Gather.** Ask for the raw material if it wasn't given: what shipped, what's in
    progress, what's blocked, and any numbers worth citing.
-2. **Check the wiki.** Read [`wiki/about-me.md`](../../wiki/about-me.md) and
-   [`wiki/taste.md`](../../wiki/taste.md) so the voice and altitude match the person.
+2. **Check the wiki.** Read [`wiki/_operator.md`](../../wiki/_operator.md) so the voice and
+   altitude match the person.
 3. **Group by theme**, not by chronology. Lead with outcomes, not activity.
 4. **Write it** in this shape:
    - **TL;DR** — one sentence.

@@ -4,7 +4,7 @@ An opinionated starter for turning AI from a chat box into a **coworker** you de
 
 This repo is the "end state" from the workshop, ready to fork. It gives you four things:
 
-1. **A wiki** (`/wiki`) — durable context AI can read: your role, workflows, taste, projects.
+1. **A wiki** (`/wiki`) — light context about you, plus **LLM-maintained topic knowledge bases**: drop in sources, the AI distills and grows the notes.
 2. **Persistent instructions** (`AGENTS.md`) — how AI should always work with you.
 3. **A skill** (`/skills/draft-update`) — a repeatable workflow, not a one-off prompt.
 4. **A shippable page** (`/site`) — a real artifact you deploy to the internet.
@@ -31,7 +31,7 @@ This repo is the "end state" from the workshop, ready to fork. It gives you four
 
 | Activity | Folder | Prompt to paste into your AI |
 |---|---|---|
-| **1. Build your wiki** | `/wiki` | *"Interview me until you understand my role, then write the notes in `/wiki` so a new coworker could get up to speed on me in five minutes. Push back where my answers are vague."* |
+| **1. Build a topic knowledge base** | `/wiki` | *"Fill in `wiki/_operator.md` by interviewing me. Then duplicate `wiki/topics/example-ai-knowledge-bases` for a topic I actually research, tell me what sources to drop in `sources/`, and distill `README.md` from them — synthesize and cite, don't summarize each one."* |
 | **2. Front-load a real task** | `/skills` | *"Grill me about a real task until you can write a clear spec with checklist milestones, then save it as a skill under `/skills`. Don't start the work until the spec is tight."* |
 | **3. Ship something small** | `/site` | *"Make a simple page in `/site` — no database, no build step. Then deploy it to Cloudflare Pages and verify the live URL actually loaded."* |
 
@@ -54,7 +54,7 @@ You already know your way around a repo — so use the parts of the model that p
 
 ## Your next 7 days
 
-- [ ] Add one note to `/wiki` each day.
+- [ ] Add one source to a topic in `/wiki` each day and have the AI re-distill it.
 - [ ] Add one line to `AGENTS.md` (one persistent instruction).
 - [ ] Turn one repeated task into a skill or checklist in `/skills`.
 - [ ] Ship one tiny artifact from `/site`.
@@ -67,7 +67,9 @@ You already know your way around a repo — so use the parts of the model that p
 ```
 .
 ├── AGENTS.md          # persistent instructions for your AI coworker
-├── wiki/              # durable memory: who you are, how you work
+├── wiki/
+│   ├── _operator.md   # light context about you
+│   └── topics/        # LLM-maintained knowledge bases (sources → distilled notes)
 ├── skills/            # packaged, repeatable workflows
 ├── site/              # a simple page to deploy (Cloudflare Pages)
 ├── DEPLOY.md          # how to put the page on the internet
